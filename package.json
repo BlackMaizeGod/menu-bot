@@ -1,0 +1,26 @@
+{
+  "name": "Hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon main.js"
+  },
+  "engines": {
+    "node": "8.15.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlackMaizeGod/menu-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlackMaizeGod/menu-bot/issues"
+  },
+  "homepage": "https://github.com/BlackMaizeGod/menu-bot#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.30.0"
+  }
+}

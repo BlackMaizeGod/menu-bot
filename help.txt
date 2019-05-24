@@ -1,0 +1,29 @@
+photo=[
+    {
+        type: "photo",
+        media:
+            "src"
+    }
+    ]
+buttons = [
+    {
+        title: ``,
+        inline_keyboard: [
+            [
+                {text: '', callback_data: ''}
+            ],
+            [
+                {text: '\uD83C\uDF55 ', callback_data: ''},
+                {text: '\uD83C\uDF70 ', callback_data: ''},
+                {text: '\uD83C\uDF78 ', callback_data: ''}
+            ]
+        ]
+    }
+]
+bot.on('callback_query',function (msg) {
+const chatId = msg.hasOwnProperty('chat') ? msg.chat.id : msg.from.id;
+....
+bot.answerCallbackQuery(msg.id);
+}
+https://apps.timwhitlock.info/emoji/tables/unicode     таблица смайлов
+https://codepoints.net/                                превращает смайлы в джс

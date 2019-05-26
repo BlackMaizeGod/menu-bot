@@ -261,7 +261,8 @@ bot.on('callback_query',function (msg) {
                     && buttonValue != 'show' && buttonValue != 'reject'
                     && buttonValue != 'Зроби-сам-кнопка' && buttonValue != 'Отримати меню'
                     && buttonValue != 'tables' && firstPart != 'table'
-                    && clientInfo.name != '' && clientInfo.phone != '') {
+                    && clientInfo.name != '' && clientInfo.phone != ''
+                    && buttonValue != 'active' && buttonValue != 'nonactive') {
                     if(clientInfo.order.indexOf(buttonValue) == -1) {
                         pushItemToOrder(clientInfo.order, buttonValue);
                         fullPrice += price;
@@ -300,7 +301,7 @@ bot.on('callback_query',function (msg) {
                 } else if (firstPart == 'table' && chatId != adminId) {
                     tables.selectedTable = parseInt(secondPart);
                     if (tables.falseTables.indexOf(tables.selectedTable + '') == -1 && chatId != adminId) {
-                        clientInfo.order.push(`[Клієнт просив забронювати ${tables.selectedTable} столик]`);
+                        clientInfo.order.push(`[Клієнт забронював ${tables.selectedTable} столик]`);
                         let index = tables.trueTables.indexOf(tables.selectedTable + '');
                         tables.falseTables.push(tables.selectedTable + '');
                         if(index !== -1){

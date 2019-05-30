@@ -241,7 +241,7 @@ bot.on('callback_query',function (msg) {
                         bot.answerCallbackQuery(msg.id,`Активні столики: ${tables.trueTables} 
 Неактивні столики: ${tables.falseTables} `);
                     } else {
-                        tables.falseTables.push(secondPart);
+                        tables.falseTables.push(secondPart + '');
                         bot.answerCallbackQuery(msg.id,`Активні столики: ${tables.trueTables} 
 Неактивні столики: ${tables.falseTables} `);
                     }
